@@ -8,5 +8,6 @@ public class ZSolution {
         humanoidRobo.display(2,3);
         Irobot dogRobo = RobotFactory.createRobot("DOG");
         dogRobo.display(5,10);
+        
         }
 }
