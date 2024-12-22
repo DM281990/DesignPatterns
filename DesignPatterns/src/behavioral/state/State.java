@@ -1,5 +1,9 @@
 package behavioral.state;
 
+import behavioral.state.inventory.Coin;
+import behavioral.state.inventory.Item;
+import behavioral.state.inventory.VendingMachine;
+
 import java.util.List;
 
 public interface State {

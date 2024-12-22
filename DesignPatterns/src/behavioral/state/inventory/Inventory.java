@@ -1,4 +1,4 @@
-package behavioral.state;
+package behavioral.state.inventory;
 
 public class Inventory {
     public ItemShelf[] getInventory() {
@@ -20,18 +20,18 @@ public class Inventory {
         for(int i=0;i<inventory.length;i++){
             ItemShelf space = new ItemShelf();
             space.setCode(startCode);
-            space.soldOut=true;
+            space.setSoldOut(true);
             inventory[i]=space;
             startCode++;
         }
     }
 
-    public void addItem(Item item,int codeNumber) throws Exception {
+    public void addItem(Item item, int codeNumber) throws Exception {
         for(ItemShelf itemShelf:inventory){
-            if(itemShelf.code==codeNumber){
-                if(itemShelf.soldOut){
-                    itemShelf.soldOut=false;
-                    itemShelf.item=item;
+            if(itemShelf.getCode() ==codeNumber){
+                if(itemShelf.isSoldOut()){
+                    itemShelf.setSoldOut(false);
+                    itemShelf.setItem(item);
                 }
                 else{
                     throw new Exception("Item already present");
@@ -42,9 +42,9 @@ public class Inventory {
 
     public Item getItem(int codeNumber) {
         for(ItemShelf itemShelf:inventory){
-            if(itemShelf.code==codeNumber){
-                if(!itemShelf.soldOut){
-                    return itemShelf.item;
+            if(itemShelf.getCode() ==codeNumber){
+                if(!itemShelf.isSoldOut()){
+                    return itemShelf.getItem();
                 }
             }
         }

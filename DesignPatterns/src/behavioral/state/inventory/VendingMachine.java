@@ -1,9 +1,8 @@
-package behavioral.state;
+package behavioral.state.inventory;
 
-import behavioral.state.impl.HasMoneyState;
+import behavioral.state.State;
 import behavioral.state.impl.IdleState;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 

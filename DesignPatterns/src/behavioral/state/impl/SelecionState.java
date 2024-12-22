@@ -1,11 +1,10 @@
 package behavioral.state.impl;
 
-import behavioral.state.Coin;
-import behavioral.state.Item;
+import behavioral.state.inventory.Coin;
+import behavioral.state.inventory.Item;
 import behavioral.state.State;
-import behavioral.state.VendingMachine;
+import behavioral.state.inventory.VendingMachine;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class SelecionState implements State {

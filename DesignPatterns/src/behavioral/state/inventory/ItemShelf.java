@@ -1,4 +1,4 @@
-package behavioral.state;
+package behavioral.state.inventory;
 
 public class ItemShelf {
     int code;

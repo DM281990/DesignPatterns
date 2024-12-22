@@ -1,4 +1,4 @@
-package behavioral.state;
+package behavioral.state.inventory;
 
 public enum Coin {
     PENNY(1),
